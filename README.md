@@ -84,7 +84,7 @@ Parâmetros aceitos:
 - orderDirection = Direção da ordenação, aceita os valores: asc | desc;
 - filterPriority = Filtro do campo prioridade, aceita os valores: 1 = Alta | 2 = Normal
 - filterInitialDate = Filtro do campo data de cadastro, data inicial, formato dd/mm/YYYY HH24:mm:ss
-- filterInitialDate = Filtro do campo data de cadastro, data final, formato dd/mm/YYYY HH24:mm:ss
+- filterFinalDate = Filtro do campo data de cadastro, data final, formato dd/mm/YYYY HH24:mm:ss
 
 --------
 
