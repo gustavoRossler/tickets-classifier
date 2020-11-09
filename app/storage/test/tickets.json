@@ -1,0 +1,54 @@
+[
+  {
+    "TicketID": 28890,
+    "CategoryID": 57526,
+    "CustomerID": 97979,
+    "CustomerName": "Cox Workman",
+    "CustomerEmail": "cox.workman@neoassist.com",
+    "DateCreate": "2017-12-13 03:08:42",
+    "DateUpdate": "2018-01-04 09:18:25",
+    "Interactions": [
+      {
+        "Subject": "Sem Assunto",
+        "Message": "Estou procurando bermuda masculina Com bolsos laterais 100 por cento poliéster.",
+        "DateCreate": "2017-12-13 03:08:42",
+        "Sender": "Customer"
+      },
+      {
+        "Subject": "RE: Sem Assunto",
+        "Message": "Olá! Tudo bem? Não temos esse modelo :/ Temos outros modelos no site, dá uma olhada.",
+        "DateCreate": "2018-01-03 09:18:25",
+        "Sender": "Expert"
+      },
+      {
+        "Subject": "RE: Sem Assunto",
+        "Message": "Obrigado. GOsto de bermuda com bolsos laterais . Quem fabricou este modelo?",
+        "DateCreate": "2018-01-04 09:18:25",
+        "Sender": "Customer"
+      }
+    ]
+  },
+  {
+    "TicketID": 28891,
+    "CategoryID": 46403,
+    "CustomerID": 97974,
+    "CustomerName": "Vilma Mcmahon",
+    "CustomerEmail": "vilma.mcmahon@neoassist.com",
+    "DateCreate": "2017-12-25 03:12:39",
+    "DateUpdate": "2018-02-12 05:14:11",
+    "Interactions": [
+      {
+        "Subject": "Reclamação",
+        "Message": "Boa noite! Comprei na loja um tênis para minha filha, porém está manchando a meia, vejam as fotos; O que fazer para não estragar todas as meias???",
+        "DateCreate": "2017-12-25 03:12:39",
+        "Sender": "Customer"
+      },
+      {
+        "Subject": "RE: Reclamação",
+        "Message": "Bom dia Tudo bem? Esperamos que sim! Poxa, uma pena ter ocorrido com o tênis... Neste caso, há uma garantia diferenciada de 12 meses, e para oferecer essa garantia, a marca define que para casos de defeitos, seja feito a avaliação diretamente com eles, para avaliar o defeito e já emitir o código de autorização da troca. Assim que emitido o código, basta comparecer até a loja com o produto para trocar!",
+        "DateCreate": "2018-02-12 05:14:11",
+        "Sender": "Expert"
+      }
+    ]
+  }
+]
