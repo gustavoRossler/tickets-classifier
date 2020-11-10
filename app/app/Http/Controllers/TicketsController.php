@@ -96,7 +96,7 @@ class TicketsController extends Controller
                 ->offset($pageSize * ($pageNumber - 1))
                 ->limit($pageSize)
                 ->get();
-                
+
             return response()->json([
                 'success' => true,
                 'totalRows' => $totalRows,
@@ -116,10 +116,14 @@ class TicketsController extends Controller
     public function uploadFile(Request $request)
     {
         try {
+            if (!Storage::exists('public/uploads/')) {
+                Storage::makeDirectory('public/uploads/');
+            }
+
             $validator = Validator::make(
                 $request->all(),
                 [
-                    'file' => 'required|mimes:json,txt|max:2048',
+                    'file' => 'required|max:2048',
                 ]
             );
 
