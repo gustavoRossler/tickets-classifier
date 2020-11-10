@@ -2,6 +2,8 @@
 
 namespace Tests\Feature;
 
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
@@ -11,8 +13,8 @@ use Tests\TestCase;
 
 class TicketsTest extends TestCase
 {
+    use DatabaseMigrations;
     use RefreshDatabase;
-    use WithoutMiddleware;
 
     public function test_can_get_list()
     {

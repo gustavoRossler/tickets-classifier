@@ -13,8 +13,12 @@ class AddTicketIdToTickets extends Migration
      */
     public function up()
     {
-        Schema::table('tickets', function (Blueprint $table) {
-            $table->integer('ticket_id')->unique();
+        $driver = Schema::connection($this->getConnection())->getConnection()->getDriverName();
+        Schema::table('tickets', function (Blueprint $table) use ($driver) {
+            $column = $table->integer('ticket_id')->unique();
+            if ($driver == 'sqlite') {
+                $column->nullable();
+            }
         });
     }
 

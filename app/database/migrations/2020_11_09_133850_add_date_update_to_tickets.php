@@ -13,8 +13,12 @@ class AddDateUpdateToTickets extends Migration
      */
     public function up()
     {
-        Schema::table('tickets', function (Blueprint $table) {
-            $table->dateTime('date_update');
+        $driver = Schema::connection($this->getConnection())->getConnection()->getDriverName();
+        Schema::table('tickets', function (Blueprint $table) use ($driver) {
+            $column = $table->dateTime('date_update');
+            if ($driver == 'sqlite') {
+                $column->nullable();
+            }
         });
     }
 

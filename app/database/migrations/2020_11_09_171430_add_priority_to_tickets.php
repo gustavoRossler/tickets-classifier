@@ -13,8 +13,12 @@ class AddPriorityToTickets extends Migration
      */
     public function up()
     {
-        Schema::table('tickets', function (Blueprint $table) {
-            $table->integer('priority')->comment('1=High;2=Normal')->nullable()->default(2);
+        $driver = Schema::connection($this->getConnection())->getConnection()->getDriverName();
+        Schema::table('tickets', function (Blueprint $table) use ($driver) {
+            $column = $table->integer('priority')->comment('1=High;2=Normal')->nullable()->default(2);
+            if ($driver == 'sqlite') {
+                $column->nullable();
+            }
         });
     }
 

@@ -13,8 +13,12 @@ class AddDateCreateToTicketsInteractions extends Migration
      */
     public function up()
     {
-        Schema::table('tickets_interactions', function (Blueprint $table) {
-            $table->dateTime('date_create');
+        $driver = Schema::connection($this->getConnection())->getConnection()->getDriverName();
+        Schema::table('tickets_interactions', function (Blueprint $table) use ($driver) {
+            $column = $table->dateTime('date_create');
+            if ($driver == 'sqlite') {
+                $column->nullable();
+            }
         });
     }
 
